@@ -9,7 +9,7 @@ from bokeh.transform import linear_cmap
 from bokeh.models import ColorBar
 
 # Read dataset
-df = pd.read_excel('mesonet_QC_data.xlsx')
+df = pd.read_csv('mesonet_QC_data.csv')
 df = df.groupby(['station_name', 'nominal_depth'], as_index=False).mean()
 df.drop(['ring_number', 'core_number'], axis='columns', inplace=True)
 
